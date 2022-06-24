@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import CustomerRegister from './CustomerRegister';
 import CustomerWelcome from './CustomerWelcome';
 import Dashboard from './Dashboard';
+import ResetPassword from './ResetPassword';
+import ForgotPassword from './ForgotPassword';
 
 
 
@@ -17,6 +19,8 @@ const appRoutes =
       <Route path="/customer/register" element={<CustomerRegister />} />
       <Route path="/welcome" element={<CustomerWelcome/>} />
       <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/resetpassword" element={<ResetPassword/>} />
+      <Route path="/forgotpassword" element={<ForgotPassword/>} />
       {/* <Route path='/dashboard' element={ <Security component={<Dashboard/>} /> }/>
       <Route path='/settings' element={ <Security component={<Settings/>} /> }/> */} 
 

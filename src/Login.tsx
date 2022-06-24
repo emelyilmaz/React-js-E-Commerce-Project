@@ -2,19 +2,21 @@ import { AxiosError } from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ILogin } from './models/ILogin';
-import { userLogin } from './Services';
+import { forgotPassword, userLogin } from './Services';
 
 
 function Login() {
 
 
   const navigate=useNavigate()
+  const navigate2=useNavigate()
 
  
 const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 const [loginError,setLoginError]=useState(false)
 const [loginMessage, setloginMessage] =useState('')
+
 
 
 
@@ -51,7 +53,7 @@ const  fncSend= (evt:React.FormEvent) => {
       const err = error as AxiosError
    
       if (err.response) {
-        const stResult=JSON.stringify(err.response?.data)
+        const stResult=JSON.stringify(err.response.data)
         const errorObject:ILogin =JSON.parse(stResult)
         const messageError=errorObject.message
         setloginMessage(messageError!)
@@ -67,7 +69,7 @@ const  fncSend= (evt:React.FormEvent) => {
    <>
     <div className='row'>
      <div className='col-sm-4'></div>
-     <div className='col-sm-4'><h1 className='text-center'>User Login</h1>
+     <div className='col-sm-4'><h1 className='text-center'> Login</h1>
      <div style={{ display: loginError === true ? 'block' : 'none'  }} className="alert alert-danger alert-dismissible fade show" role="alert">
               
               <strong>Error!</strong> { loginMessage }
@@ -81,10 +83,26 @@ const  fncSend= (evt:React.FormEvent) => {
       <div className='mt-3'>
       <input onChange={(evt)=>setPassword(evt.target.value)} className='form-control' type='password' placeholder='Password'/>
       </div>
-      <div className='mt-3'>
+      <div className ='mt-3'>
+      <div className="d-grid gap-2">
        <button  className='btn btn-success' type='submit'>Log-in</button>
-       <a onClick={(evt)=>navigate('customer/register')} role='button' className='btn btn-danger'>Register</a>
       </div>
+      </div>
+      
+
+      <div className='mt-3'>
+      <div className='row'>
+      <div className='col-sm-5'>
+      <a onClick={(evt)=>navigate2('forgotpassword')} role='button' className='stretched-link'>Forgot password?</a>
+      </div >
+     
+      <div className='col-sm-7'>
+      <a onClick={(evt)=>navigate('customer/register')} role='button' className=''>Sign Up for Hero Company</a>
+      </div>
+
+      </div>
+      </div>
+      
       
      </form>
      </div>

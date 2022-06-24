@@ -7,10 +7,11 @@ const baseURL = 'http://localhost:8092/'
 
 const config = axios.create({
     baseURL: baseURL
+    
     // params: {
     //     ref: ref   //her seferinde servis aktivitesine referansımızı gönder.
     // },
-    // headers: { Authorization: `Bearer`+ }
+    // headers: { Authorization: `Bearer` }
 })
 
 
@@ -37,9 +38,11 @@ export const customerRegister = (name: string, surname: string,  email: string, 
 
     }
 
-    
     return config.post<ICustomerRegister>('customer/register',sendParams ) //bu body yollarken  post//null header
 
-    
+}    
 
-}      
+export const forgotPassword=(email:string)=>{
+ 
+    return config.post("forgotPassword?email="+email)
+}
