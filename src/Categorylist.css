@@ -1,0 +1,19 @@
+.menu{
+    list-style: none;
+    margin-top: none;
+    margin-left: 0px;
+    width: 100%;
+   
+}
+
+.menu li{
+    display: inline;
+    margin: 10px;
+    position: relative;
+   
+}
+.liste {
+    float: left;
+    margin-left: 10px;
+   
+}

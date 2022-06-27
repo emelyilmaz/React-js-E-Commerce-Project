@@ -30,12 +30,15 @@ const  fncSend= (evt:React.FormEvent) => {
       if(status){
         const jwt=res.data.jwt
         const result=res.data.result!
+        const stData=JSON.stringify(res.data!)
         const roles=result.roles!
         const roleId=roles[0].id
         const stResult=JSON.stringify(result)
         const stJwt=JSON.stringify(jwt)
+        console.log(stJwt)
         sessionStorage.setItem("result",stResult)
         sessionStorage.setItem("jwt",stJwt)
+        sessionStorage.setItem("data",stData)
         setLoginError(false)
          if(roleId===1){
             navigate('/dashboard')
@@ -87,24 +90,24 @@ const  fncSend= (evt:React.FormEvent) => {
       <div className="d-grid gap-2">
        <button  className='btn btn-success' type='submit'>Log-in</button>
       </div>
-      </div>
+      </div></form>
       
 
       <div className='mt-3'>
       <div className='row'>
-      <div className='col-sm-5'>
-      <a onClick={(evt)=>navigate2('forgotpassword')} role='button' className='stretched-link'>Forgot password?</a>
-      </div >
+        <div className='col-sm-4'>
+        <a onClick={(evt)=>navigate2('forgotpassword')} role='button' className='btn btn-link'>Forgot password?</a>
+        </div >
      
-      <div className='col-sm-7'>
-      <a onClick={(evt)=>navigate('customer/register')} role='button' className=''>Sign Up for Hero Company</a>
-      </div>
+        <div className='col-sm-8'>
+        <a onClick={(evt)=>navigate('customer/register')} role='button' className='btn btn-link'>Sign Up for Hero Company</a>
+        </div>
 
       </div>
       </div>
       
       
-     </form>
+     
      </div>
      <div className='col-sm-4'></div>
    </div>
