@@ -17,7 +17,7 @@ export interface Result {
     id?:                 number;
     firstName?:          string;
     secondName?:           string;
-    phone?:              string;
+    telephone?:              string;
     email?:              string;
     password?:           string;
     enabled?:            boolean;

@@ -37,7 +37,7 @@ const  fncSend= (evt:React.FormEvent) => {
         const stJwt=JSON.stringify(jwt)
         console.log(stJwt)
         sessionStorage.setItem("result",stResult)
-        sessionStorage.setItem("jwt",stJwt)
+        sessionStorage.setItem("jwt",stData)
         sessionStorage.setItem("data",stData)
         setLoginError(false)
          if(roleId===1){

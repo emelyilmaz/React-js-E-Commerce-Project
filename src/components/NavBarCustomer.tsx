@@ -4,13 +4,9 @@ import { NavLink, useSearchParams } from 'react-router-dom'
 import { isTemplateExpression } from 'typescript'
 import CustomerWelcome from '../CustomerWelcome'
 import { clear } from 'console'
-/* 
-interface ButtonProps {
-  
+ 
 
-  Search: () => void;
-} */
-function NavBarCustomer(item:{result:Result} /*item1:{Search:ButtonProps}*/) {
+function NavBarCustomer(item:{result:Result} ) {
   const [search, setsearch] = useState('')
 
   const clear=()=>{
@@ -61,8 +57,6 @@ return (
  
 </ul>
 <form className="d-flex" role="search">
-  <input onChange={(evt) =>  setsearch(evt.target.value)} className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-  <button   style={{color:'white',borderColor:'white'}} className="btn btn-outline-success" type="submit">Search</button>
 </form>
 <ul  className="nav- left">
 <li className="nav-item dropdown">

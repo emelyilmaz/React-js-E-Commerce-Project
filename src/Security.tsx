@@ -7,9 +7,11 @@ function Security(item:{componet:JSX.Element}) {
 
 const control=()=>{
     const stSession=sessionStorage.getItem("result")
+   
     if(stSession){
-        try {
+        try { 
             const result:Result  =JSON.parse(stSession)
+        
      return result
         } catch (error) {
             sessionStorage.removeItem('result')
@@ -21,9 +23,7 @@ const control=()=>{
     }
 
 }
-/* const SearchProduct=(evt: React.KeyboardEvent)=>{
-    const input = (evt.target as HTMLInputElement).value
-} */
+
 
 const resultcontrol=control();
 

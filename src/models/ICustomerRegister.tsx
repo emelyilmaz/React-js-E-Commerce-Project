@@ -13,8 +13,8 @@ export interface Result {
     lastModifiedDate?:   number;
     id?:                 number;
     firstName?:          string;
-    lastName?:           string;
-    phone?:              string;
+    secondName?:           string;
+    telephone?:              string;
     email?:              string;
     password:           string;
     enabled:            boolean;

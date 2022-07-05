@@ -44,6 +44,7 @@ function CustomerRegister() {
         }).catch(error=>{
     
             const err = error as AxiosError
+            console.log(err)
          
             if (err.response) {
               const stResult=JSON.stringify(err.response?.data)

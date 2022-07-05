@@ -30,8 +30,8 @@ const appRoutes =
       <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="/resetPassword" element={<ResetPassword/>} />
       <Route path="/forgotpassword" element={<ForgotPassword/>} />
-      <Route path="/oldOrder" element={<OldOrder/>} />
-      <Route path="/myChart" element={<Basket/>} />
+      <Route path="/oldOrder" element={<Security componet={<OldOrder/>} /> } />
+      <Route path="/myChart" element={<Security componet={<Basket/>} /> } />
       {/* <Route path='/dashboard' element={ <Security component={<Dashboard/>} /> }/>
       <Route path='/settings' element={ <Security component={<Settings/>} /> }/> */} 
 
