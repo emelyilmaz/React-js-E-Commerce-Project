@@ -6,8 +6,8 @@
 
 
 
- <a href="https://github.com/emelyilmaz/React-js-E-Commerce-Project/blob/main/images/2.JPG" target="_blank">
-<img src="https://github.com/emelyilmaz/React-js-E-Commerce-Project/blob/main/images/2.JPG" width="700" style="max-width:100%;"></a>
+ ![gif (3)](https://user-images.githubusercontent.com/61032852/177663518-cfe50c38-28cf-4fa7-9f4b-583946150897.gif)
+
 
 
 
