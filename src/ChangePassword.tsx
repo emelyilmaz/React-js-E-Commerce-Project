@@ -28,7 +28,7 @@ function ChangePassword() {
 
          if(err.response){
           const stData=JSON.stringify(err.response?.data)
-           console.log(stData)
+        
           const objectData:ICustomerChangePassword=JSON.parse(stData)
        
           const errors=objectData.error!
@@ -38,7 +38,7 @@ function ChangePassword() {
               if(e.newPassword! !=null){
               
                 setnewPassworError(e.newPassword)
-                console.log(newPassworError)
+              
               }else{
                 setoldpasswordError(e.oldPassword!)
               }
@@ -49,7 +49,7 @@ function ChangePassword() {
           
         const messageError=objectData.message!
         if( messageError!=null )
-        console.log(messageError)
+       
             setisMessageError(true)
             setmessageError(messageError)
          }
