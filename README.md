@@ -15,7 +15,5 @@
 ![gif (5)](https://user-images.githubusercontent.com/61032852/177666558-df8bb0f0-8fdf-437a-a21e-f04b94032bed.gif)
 
 
+![gif (7)](https://user-images.githubusercontent.com/61032852/177667673-88c2bf8d-f764-4e33-ad98-1e88cfcf7726.gif)
 
-
-
-![gif (1)](https://user-images.githubusercontent.com/61032852/177565183-003d20f8-4b70-489d-9fc9-eb41874ae514.gif)
